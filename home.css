@@ -59,10 +59,10 @@ section {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh;        
+  min-height: 100vh;
   margin: 0;
-  padding: 0;               
-  scroll-margin-top: 5rem;  
+  padding: 0;
+  scroll-margin-top: 5rem;
   box-sizing: border-box;
 }
 
@@ -96,8 +96,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-} 
-
+}
 
 /* Contact Form Styling */
 .contact-form {
@@ -152,9 +151,27 @@ section {
   background: #008c9e;
 }
 
+#home{
+      padding: 4rem;
+}
 
 
+#home h1{
+      font-size: 5rem;
+}
 
+#home p{
+      font-size: 1.5rem;
+}
 
+#home a{
+      background-color: #008c9e;
+      border-radius: 2rem;
+      padding: 1rem;
+      color: #fff;
+      text-decoration: none;
+}
 
-
+#home span{
+      color: #00bcd4;
+}
