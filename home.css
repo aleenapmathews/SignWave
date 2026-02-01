@@ -175,3 +175,10 @@ section {
 #home span{
       color: #00bcd4;
 }
+
+
+.button{
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+}

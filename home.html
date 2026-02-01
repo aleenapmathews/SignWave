@@ -5,7 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="home.css" />
     <title>SignWave</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+
+
   </head>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    emailjs.init("zqoTFikAyzH_MW5VZ"); 
+
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm(
+        "service_ifwjv6a",   
+        "template_qtocxp7",  
+        this
+      )
+      .then(function () {
+        alert("Message sent successfully!");
+      })
+      .catch(function (error) {
+        alert("Failed to send message");
+        console.error(error);
+      });
+    });
+
+  });
+</script>
+
+
   <body>
     <header>
       <div>
@@ -29,9 +61,14 @@
           <p >
             Unlock the power of connection by learning American Sign Language (ASL). Use our innovative, AI-powered tools and join a growing, inclusive community dedicated to accessibility.
           </p>
-          <a href="#about" >
-            Start Learning Today &rarr;
+          <div class="button">
+          <a href="text.html" >
+            Sign &rarr; Text
           </a>
+          <a>
+            Text &rarr; Sign
+          </a>
+          </div>
         </div>
 
     </section>
@@ -71,24 +108,24 @@
     <section id="contact">
       <h1>Contact Us</h1>
       
-        <form class="contact-form">
-    <div class="form-group">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
-    </div>
+        <form class="contact-form" id="contact-form">
+  <div class="form-group">
+    <label>Your Name</label>
+    <input type="text" name="name" required>
+  </div>
 
-    <div class="form-group">
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    </div>
+  <div class="form-group">
+    <label>Your Email</label>
+    <input type="email" name="email" required>
+  </div>
 
-    <div class="form-group">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Write your message" rows="5" required></textarea>
-    </div>
+  <div class="form-group">
+    <label>Message</label>
+    <textarea name="message" rows="5" required></textarea>
+  </div>
 
-    <button type="submit">Send Message</button>
-  </form>
+  <button type="submit">Send Message</button>
+</form>
 
   
     </section>
